@@ -56,4 +56,8 @@ clear while : do
 
 --save file
 chmod 755 ~/rust_dedicated/startrust.sh 
-  
+
+# Firewall
+sudo firewall-cmd --add-port=28016/tcp --permanent
+sudo firewall-cmd --add-port=28015/tcp --permanent
+

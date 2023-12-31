@@ -6,7 +6,7 @@
 #and https://wiki.facepunch.com/rust/Creating-a-server  
   
 # Run the following commands: 
-#prerequisits
+#prerequisits  
 sudo dnf install -y epel-release  
 sudo yum install -y glibc.i686 libstdc++.i686 nano tar screen
 

@@ -1,32 +1,24 @@
 # Rust
 # Commands to create a rust server on Centos (9)
 
-#<based on https://www.rustafied.com/how-to-host-a-rust-server-in-linux
-#and steamcmd - https://developer.valvesoftware.com/wiki/SteamCMD#Linux>
+#based on https://www.rustafied.com/how-to-host-a-rust-server-in-linux  
+#and steamcmd - https://developer.valvesoftware.com/wiki/SteamCMD#Linux
 
 # run the following commands: (details of these commands can be found in the steamcmd docco)
 
 sudo yum install -y glibc.i686 libstdc++.i686 nano tar  
 
 sudo useradd -m steam  
-sudo passwd steam  
-
-#<unnecessary?>  
-sudo -u steam -s  
-cd /home/steam  
-  
-exit  
-#<end unnecessary?>  
-  
+sudo passwd steam   
 sudo -iu steam  
 mkdir ~/Steam && cd ~/Steam  
   
 curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -  
   
 ./steamcmd.sh +login anonymous +force_install_dir /home/steam/rust_dedicated +app_update 258550 +quit  
-
+  
 #Rust is now installed
-
+  
 # Configure - create a new startup file with options for rust  
 #create a file:  
 nano ~/rust_dedicated/startrust.sh  
@@ -53,10 +45,10 @@ clear while : do
   -server.url "Website Here"  
   echo "\nRestarting server...\n" done  
 
---save file
+--save file and exit
+
 chmod 755 ~/rust_dedicated/startrust.sh 
 
 # Firewall
-sudo firewall-cmd --add-port=28016/tcp --permanent
 sudo firewall-cmd --add-port=28015/tcp --permanent
-
+sudo firewall-cmd --add-port=28016/udp --permanent

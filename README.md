@@ -5,10 +5,12 @@
 #and steamcmd - https://developer.valvesoftware.com/wiki/SteamCMD#Linux  
 #and https://wiki.facepunch.com/rust/Creating-a-server  
   
-# run the following commands: (details of these commands can be found in the steamcmd docco)
+# run the following commands: 
+#prerequisits
 sudo dnf install -y epel-release  
 sudo yum install -y glibc.i686 libstdc++.i686 nano tar screen
 
+#(details of these commands can be found in the steamcmd docco)
 sudo useradd -m steam  
 sudo passwd steam   
 sudo -iu steam  

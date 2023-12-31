@@ -64,3 +64,6 @@ sudo firewall-cmd --add-port={28014/udp,28015/udp,28016/tcp,28017/tcp} --permane
 screen -S rust_server ./startrust.sh
 
 #detach from the session using Clrl+A and then press d. (it will run in the background) run "screen -r" to reconnect
+
+#to mointer the logs: (rust can take up to 30 minutes to load)
+tail -n 50 rustlog.txt

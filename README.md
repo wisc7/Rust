@@ -33,7 +33,7 @@ clear while : do
   -server.queryport 28014 \
   -server.port 28015 \  
   -rcon.port 28016 \  
-  -app.port 28017 \
+  -app.port 28017 \  
   -rcon.password "rcon password here" \  
   -server.maxplayers 75 \  
   -server.hostname "Server Name" \  

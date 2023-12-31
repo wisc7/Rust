@@ -27,13 +27,12 @@ curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.g
   
 ./steamcmd.sh +login anonymous +force_install_dir /home/steam/rust_dedicated +app_update 258550 +quit  
   
-# Installed
-  
-  
+# Installed - create a new starup file with options
+    
 #create a file:  
 nano ~/rust_dedicated/startrust.sh  
   
-#past into file:  
+#past the following into file modifying with your values.
 
 #!/bin/sh  
 clear while : do  
@@ -55,6 +54,6 @@ clear while : do
   -server.url "Website Here"  
   echo "\nRestarting server...\n" done  
 
-# save file
+--save file
 chmod 755 ~/rust_dedicated/startrust.sh 
   

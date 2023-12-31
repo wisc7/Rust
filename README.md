@@ -33,6 +33,7 @@ clear while : do
   -server.queryport 28014 \
   -server.port 28015 \  
   -rcon.port 28016 \  
+  -app.port 28017 \
   -rcon.password "rcon password here" \  
   -server.maxplayers 75 \  
   -server.hostname "Server Name" \  
@@ -44,8 +45,10 @@ clear while : do
   -server.globalchat true \  
   -server.description "Description Here" \  
   -server.headerimage "512x256px JPG/PNG headerimage link here" \  
-  -server.url "Website Here"  
-  -logfile "rustlog.txt"  
+  -server.url "Website Here"  \
+  -logfile "rustlog.txt"  \
+  -hackablelockedcrete.requiredhackseconds \
+  -rcon.web 1
   echo "\nRestarting server...\n" done  
 
 --save file and exit
@@ -53,9 +56,7 @@ clear while : do
 chmod 755 ~/rust_dedicated/startrust.sh 
 
 # Firewall
-sudo firewall-cmd --add-port=28014/udp --permanent  
-sudo firewall-cmd --add-port=28015/udp --permanent  
-sudo firewall-cmd --add-port=28016/tcp --permanent  
+sudo firewall-cmd --add-port={28014/udp,28015/udp,28016/tcp,28017/tcp} --permanent  
 sudo firewall-cmd --reload  
 
 

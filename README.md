@@ -59,4 +59,4 @@ sudo firewall-cmd --reload
 
 
 # Start rust
-screen -S rust_server ./runds.sh
+screen -S rust_server ./startrust.sh

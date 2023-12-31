@@ -39,7 +39,8 @@ clear while : do
   -server.level "Procedural Map" \  
   -server.seed 12345 \  
   -server.worldsize 3000 \  
-  -server.saveinterval 300 \-server.globalchat true \  
+  -server.saveinterval 300 \  
+  -server.globalchat true \  
   -server.description "Description Here" \  
   -server.headerimage "512x256px JPG/PNG headerimage link here" \  
   -server.url "Website Here"  
@@ -52,3 +53,4 @@ chmod 755 ~/rust_dedicated/startrust.sh
 # Firewall
 sudo firewall-cmd --add-port=28015/tcp --permanent
 sudo firewall-cmd --add-port=28016/udp --permanent
+sudo firewall-cmd --reload

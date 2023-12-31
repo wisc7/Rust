@@ -6,8 +6,8 @@
 #and https://wiki.facepunch.com/rust/Creating-a-server  
   
 # run the following commands: (details of these commands can be found in the steamcmd docco)
-
-sudo yum install -y glibc.i686 libstdc++.i686 nano tar  
+sudo dnf install -y epel-release  
+sudo yum install -y glibc.i686 libstdc++.i686 nano tar screen
 
 sudo useradd -m steam  
 sudo passwd steam   

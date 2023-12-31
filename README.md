@@ -44,7 +44,7 @@ clear while : do
   -server.description "Description Here" \  
   -server.headerimage "512x256px JPG/PNG headerimage link here" \  
   -server.url "Website Here"  
-  -logfile "rustlog.txt"
+  -logfile "rustlog.txt"  
   echo "\nRestarting server...\n" done  
 
 --save file and exit

@@ -2,9 +2,9 @@
 # Commands to create a rust server on Centos (9)
 
 #based on https://www.rustafied.com/how-to-host-a-rust-server-in-linux  
-#and steamcmd - https://developer.valvesoftware.com/wiki/SteamCMD#Linux
-#and https://wiki.facepunch.com/rust/Creating-a-server
-
+#and steamcmd - https://developer.valvesoftware.com/wiki/SteamCMD#Linux  
+#and https://wiki.facepunch.com/rust/Creating-a-server  
+  
 # run the following commands: (details of these commands can be found in the steamcmd docco)
 
 sudo yum install -y glibc.i686 libstdc++.i686 nano tar  

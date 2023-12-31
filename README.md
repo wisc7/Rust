@@ -10,7 +10,7 @@
 sudo dnf install -y epel-release  
 sudo yum install -y glibc.i686 libstdc++.i686 nano tar screen
 
-#(details of these commands can be found in the steamcmd docco)
+#(details of these commands can be found in the steamcmd docco)  
 sudo useradd -m steam  
 sudo passwd steam   
 sudo -iu steam  

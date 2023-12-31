@@ -8,39 +8,40 @@
 
 
 
-sudo useradd -m steam
-sudo passwd steam 
+sudo useradd -m steam  
+sudo passwd steam  
 
 # unnecessary?
-sudo -u steam -s
-cd /home/steam
-
-exit
+sudo -u steam -s  
+cd /home/steam  
+  
+exit  
 # end unnecessary?
-
-sudo yum install -y glibc.i686 libstdc++.i686 nano tar
-
-sudo -iu steam
-mkdir ~/Steam && cd ~/Steam
-
-curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
-
-./steamcmd.sh +login anonymous +force_install_dir /home/steam/rust_dedicated +app_update 258550 +quit
-
+  
+sudo yum install -y glibc.i686 libstdc++.i686 nano tar  
+  
+sudo -iu steam  
+mkdir ~/Steam && cd ~/Steam  
+  
+curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -  
+  
+./steamcmd.sh +login anonymous +force_install_dir /home/steam/rust_dedicated +app_update 258550 +quit  
+  
 # Installed
+  
+  
+#create a file:  
+nano ~/rust_dedicated/startrust.sh  
+  
+#past into file:  
 
-
-#create a file:
-nano ~/rust_dedicated/startrust.sh
-
-#past into file:
-#!/bin/sh
-clear while : do
-  exec ./RustDedicated -batchmode -nographics \
-  -server.ip IPAddressHere \
-  -server.port 28015 \
-  -rcon.ip IPAddressHere \
-  -rcon.port 28016 \
+#!/bin/sh  
+clear while : do  
+  exec ./RustDedicated -batchmode -nographics \  
+  -server.ip IPAddressHere \  
+  -server.port 28015 \  
+  -rcon.ip IPAddressHere \  
+  -rcon.port 28016 \  
   -rcon.password "rcon password here" \
   -server.maxplayers 75 \
   -server.hostname "Server Name" \

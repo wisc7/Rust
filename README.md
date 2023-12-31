@@ -26,9 +26,10 @@ mkdir ~/Steam && cd ~/Steam
 curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -  
   
 ./steamcmd.sh +login anonymous +force_install_dir /home/steam/rust_dedicated +app_update 258550 +quit  
-  
-# Installed - create a new starup file with options
-    
+
+#Rust is now installed
+
+# Configure - create a new startup file with options for rust  
 #create a file:  
 nano ~/rust_dedicated/startrust.sh  
   

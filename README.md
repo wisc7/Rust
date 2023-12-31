@@ -28,10 +28,10 @@ nano ~/rust_dedicated/startrust.sh
 
 #!/bin/sh  
 clear while : do  
-  exec ./RustDedicated -batchmode -nographics \  
-  -server.ip IPAddressHere \  
+  exec ./RustDedicated -batchmode \  
+  -server.ip 0.0.0.0 \  
+  -server.queryport 28014 \
   -server.port 28015 \  
-  -rcon.ip IPAddressHere \  
   -rcon.port 28016 \  
   -rcon.password "rcon password here" \  
   -server.maxplayers 75 \  
@@ -53,8 +53,9 @@ clear while : do
 chmod 755 ~/rust_dedicated/startrust.sh 
 
 # Firewall
-sudo firewall-cmd --add-port=28015/tcp --permanent  
-sudo firewall-cmd --add-port=28016/udp --permanent  
+sudo firewall-cmd --add-port=28014/udp --permanent  
+sudo firewall-cmd --add-port=28015/udp --permanent  
+sudo firewall-cmd --add-port=28016/tcp --permanent  
 sudo firewall-cmd --reload  
 
 

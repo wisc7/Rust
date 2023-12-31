@@ -6,19 +6,17 @@
 
 # run the following commands: (details of these commands can be found in the steamcmd docco)
 
-
+sudo yum install -y glibc.i686 libstdc++.i686 nano tar  
 
 sudo useradd -m steam  
 sudo passwd steam  
 
-# unnecessary?
+#<unnecessary?>
 sudo -u steam -s  
 cd /home/steam  
   
 exit  
-# end unnecessary?
-  
-sudo yum install -y glibc.i686 libstdc++.i686 nano tar  
+#<end unnecessary?>
   
 sudo -iu steam  
 mkdir ~/Steam && cd ~/Steam  

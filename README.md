@@ -59,6 +59,7 @@ chmod 755 ~/rust_dedicated/startrust.sh
 sudo firewall-cmd --add-port={28014/udp,28015/udp,28016/tcp,28017/tcp} --permanent  
 sudo firewall-cmd --reload  
 
+#modify any network firewall/router/nat with the above ports as requried.
 
 # Start rust
 screen -S rust_server ./startrust.sh

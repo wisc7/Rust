@@ -3,6 +3,7 @@
 
 #based on https://www.rustafied.com/how-to-host-a-rust-server-in-linux  
 #and steamcmd - https://developer.valvesoftware.com/wiki/SteamCMD#Linux
+#and https://wiki.facepunch.com/rust/Creating-a-server
 
 # run the following commands: (details of these commands can be found in the steamcmd docco)
 
@@ -52,6 +53,10 @@ clear while : do
 chmod 755 ~/rust_dedicated/startrust.sh 
 
 # Firewall
-sudo firewall-cmd --add-port=28015/tcp --permanent
-sudo firewall-cmd --add-port=28016/udp --permanent
-sudo firewall-cmd --reload
+sudo firewall-cmd --add-port=28015/tcp --permanent  
+sudo firewall-cmd --add-port=28016/udp --permanent  
+sudo firewall-cmd --reload  
+
+
+# Start rust
+screen -S rust_server ./runds.sh

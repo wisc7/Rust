@@ -62,3 +62,5 @@ sudo firewall-cmd --add-port={28014/udp,28015/udp,28016/tcp,28017/tcp} --permane
 
 # Start rust
 screen -S rust_server ./startrust.sh
+
+#detach from the session using Clrl+A and then press d. (it will run in the background) run "screen -r" to reconnect

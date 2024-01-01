@@ -30,6 +30,7 @@ nano ~/rust_dedicated/startrust.sh
 
 #!/bin/sh  
 clear while : do  
+  export LD_LIBRARY_PATH="./RustDedicated_Data/Plugins/x86_64"  
   exec ./RustDedicated -batchmode \  
   -server.ip 0.0.0.0 \  
   -server.queryport 28014 \
